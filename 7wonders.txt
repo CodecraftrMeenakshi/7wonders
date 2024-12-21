@@ -47,9 +47,23 @@ export default function Wonders() {
       ];
   return (
     
-       
+       <div>
+   <div className="row row-cols-1 row-cols-md-2 g-4">
+     {empData.map((place) => (
+       <div className="col" key={place.name}>
+         <div className="card">
+           <img src={place.image} className="card-img-top" alt={place.name} />
+           <div className="card-body">
+             <h5 className="card-title">{place.name}</h5>
+             <p className="card-text">{place.location}, {place.country}</p>
+           </div>
+         </div>
+       </div>
+     ))}
+   </div>
+ </div>
 
 
     
-  )
+  );
 }
